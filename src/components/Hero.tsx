@@ -1,0 +1,74 @@
+import { profile } from "@/lib/cv-data";
+
+export default function Hero() {
+  return (
+    <section
+      id="about"
+      className="relative overflow-hidden border-b border-[var(--border)]"
+    >
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[var(--brand)] via-[var(--brand-soft)] to-[var(--brand-accent)] opacity-95" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.18),transparent_55%)]" />
+
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+        <div className="grid items-center gap-12 md:grid-cols-[1fr_auto]">
+          <div className="text-white">
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-wider backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+              Available for new challenges
+            </p>
+            <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+              {profile.name}
+            </h1>
+            <p className="mt-3 text-lg font-medium text-white/90 sm:text-xl">
+              {profile.title}
+            </p>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
+              {profile.summary}
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#experience"
+                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--brand)] shadow-lg shadow-black/10 transition-transform hover:-translate-y-0.5"
+              >
+                View Experience
+              </a>
+              <a
+                href={`mailto:${profile.email}`}
+                className="rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/20"
+              >
+                Contact Me
+              </a>
+            </div>
+
+            <dl className="mt-10 grid max-w-md grid-cols-3 gap-4 text-white">
+              <Stat label="Experience" value={profile.totalExperience} />
+              <Stat label="Certifications" value="20+" />
+              <Stat label="Industries" value="4" />
+            </dl>
+          </div>
+
+          <div className="hidden md:block">
+            <div className="relative h-64 w-64 rounded-full bg-gradient-to-br from-white/20 to-white/5 p-1 shadow-2xl backdrop-blur lg:h-80 lg:w-80">
+              <div className="grid h-full w-full place-items-center rounded-full bg-white/10 text-7xl font-bold text-white lg:text-8xl">
+                {profile.name
+                  .split(" ")
+                  .map((p) => p[0])
+                  .join("")}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Stat({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <dt className="text-xs uppercase tracking-wider text-white/70">{label}</dt>
+      <dd className="mt-1 text-2xl font-bold">{value}</dd>
+    </div>
+  );
+}
