@@ -8,10 +8,11 @@ export const profile = {
   trailblazer: "https://www.salesforce.com/trailblazer/skundu150",
   totalExperience: "9+ years",
   summary:
-    "Experienced Salesforce professional with a proven track record in architecting solutions within the Salesforce ecosystem, particularly focused on Salesforce Omnistudio. Demonstrated expertise in designing and implementing scalable and innovative solutions to meet business requirements. Proficient in analyzing complex business processes and translating them into efficient technical solutions. Skilled communicator and leader, adept at collaborating with cross-functional teams to drive successful project outcomes.",
+    "Salesforce Industry Technical Architect with 9 years of extensive experience in designing and developing robust Salesforce solutions across various sectors, including Communications Cloud, Energy and Utilities Cloud, and Media Cloud. Known for crafting innovative and scalable solutions that drive business transformation and efficiency.\n\nWith a strong foundation in Salesforce and Salesforce Industries design and development, there is a proven track record of delivering high-quality, industry-specific solutions that meet complex business requirements. This journey in the Salesforce ecosystem has equipped the ability to lead technical teams, architect end-to-end solutions, and ensure seamless integration and deployment.\n\nPassionate about leveraging Salesforce technologies to solve real-world challenges, committed to continuous learning and staying at the forefront of industry trends.",
 } as const;
 
 export const skills: string[] = [
+  "Agentforce Revenue Management",
   "Vlocity",
   "CPQ",
   "Order Management",

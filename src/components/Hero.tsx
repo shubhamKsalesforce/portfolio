@@ -23,9 +23,11 @@ export default function Hero() {
             <p className="mt-3 text-lg font-medium text-white/90 sm:text-xl">
               {profile.title}
             </p>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
-              {profile.summary}
-            </p>
+            <div className="mt-6 max-w-2xl space-y-4 text-base leading-relaxed text-white/85 sm:text-lg">
+              {profile.summary.split("\n\n").map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
