@@ -131,6 +131,7 @@ export const clients: Client[] = [
   { name: "TET", logo: "/clients/tet.png" },
   { name: "Smartest Energy", logo: "/clients/smartest-energy.png" },
   { name: "Sony Entertainment Television", logo: "/clients/sony-entertainment.png" },
+  { name: "Anthem", logo: "/clients/anthem.png" },
 ];
 
 export const certifications: string[] = [
