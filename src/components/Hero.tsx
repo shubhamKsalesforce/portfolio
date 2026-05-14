@@ -47,7 +47,7 @@ export default function Hero() {
             <dl className="mt-10 grid max-w-md grid-cols-3 gap-4 text-white">
               <Stat label="Experience" value={profile.totalExperience} />
               <Stat label="Certifications" value="20+" />
-              <Stat label="Industries" value="4" />
+              <Stat label="Industries" value="5" />
             </dl>
           </div>
 

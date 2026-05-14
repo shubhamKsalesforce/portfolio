@@ -33,6 +33,7 @@ export const skills: string[] = [
 
 export const industries: string[] = [
   "Telecommunication",
+  "Media",
   "Energy and Utilities",
   "Health",
   "Insurance",
