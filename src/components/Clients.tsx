@@ -19,7 +19,7 @@ export default function Clients() {
           {clients.map((client) => (
             <li
               key={client.name}
-              className="flex h-28 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm transition-shadow hover:shadow-md"
+              className="flex h-28 items-center justify-center rounded-xl border border-[var(--border)] bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
               title={client.name}
             >
               <div className="relative h-full w-full">

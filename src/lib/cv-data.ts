@@ -123,7 +123,7 @@ export type Client = {
 
 export const clients: Client[] = [
   { name: "Telia", logo: "/clients/telia.png" },
-  { name: "T-Mobile", logo: "/clients/t-mobile.png" },
+  { name: "T-Mobile", logo: "/clients/t-mobile.svg" },
   { name: "Orange", logo: "/clients/orange.svg" },
   { name: "Three", logo: "/clients/three.png" },
   { name: "Consolidated Communications", logo: "/clients/consolidated-communications.png" },
