@@ -50,18 +50,15 @@ export default function Hero() {
           </div>
 
           <div className="hidden md:block">
-            <div className="relative h-64 w-64 rounded-full bg-gradient-to-br from-white/20 to-white/5 p-1 shadow-2xl backdrop-blur lg:h-80 lg:w-80">
-              <div className="relative h-full w-full overflow-hidden rounded-full">
-                <Image
-                  src="/profile.jpg"
-                  alt={profile.name}
-                  width={1999}
-                  height={1333}
-                  priority
-                  sizes="(min-width: 1024px) 36rem, 29rem"
-                  className="absolute left-1/2 top-1/2 h-auto w-[180%] max-w-none -translate-x-[60%] -translate-y-[35%]"
-                />
-              </div>
+            <div className="relative h-64 w-64 overflow-hidden rounded-full bg-gradient-to-br from-white/20 to-white/5 p-1 shadow-2xl backdrop-blur lg:h-80 lg:w-80">
+              <Image
+                src="/profile.jpg"
+                alt={profile.name}
+                fill
+                priority
+                sizes="(min-width: 1024px) 20rem, 16rem"
+                className="rounded-full object-cover object-[60%_25%]"
+              />
             </div>
           </div>
         </div>
