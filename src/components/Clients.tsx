@@ -34,6 +34,11 @@ export default function Clients() {
             </li>
           ))}
         </ul>
+
+        <p className="mt-6 text-center text-xs italic text-[var(--muted)]">
+          All logos shown are trademarks of their respective owners. Used here
+          to identify past project clients; no endorsement is implied.
+        </p>
       </div>
     </section>
   );
