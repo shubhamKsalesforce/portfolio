@@ -139,9 +139,17 @@ export const certifications: string[] = [
   "Salesforce Certified JavaScript Developer 1",
 ];
 
+export const trailhead = {
+  rank: "Ranger",
+  badges: 195,
+  points: 133425,
+  trails: 13,
+} as const;
+
 export const awards: string[] = [
   "Capgemini Enabling Champion, 2019",
   "Deloitte Spot Award for Vlocity COE, 2020",
   "Cloobees Most Valued Bee, 2022",
   "Cloobees Most Valued Bee, 2023",
+  "Ideahelix Helix Radiance Award, 2026",
 ];
