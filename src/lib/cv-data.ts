@@ -119,6 +119,7 @@ export const certifications: string[] = [
   "Salesforce Certified OmniStudio Developer",
   "Salesforce Certified OmniStudio Consultant",
   "Salesforce Certified Industries CPQ Developer",
+  "Salesforce Certified Revenue Cloud Consultant",
   "Vlocity Certified Communications Order Management Developer I",
   "Vlocity Certified Professional Communications Developer II",
   "Vlocity Health Quoting Developer I",
