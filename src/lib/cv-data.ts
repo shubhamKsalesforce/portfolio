@@ -116,6 +116,23 @@ export const experience: Experience[] = [
   },
 ];
 
+export type Client = {
+  name: string;
+  logo: string;
+};
+
+export const clients: Client[] = [
+  { name: "Telia", logo: "/clients/telia.png" },
+  { name: "T-Mobile", logo: "/clients/t-mobile.png" },
+  { name: "Orange", logo: "/clients/orange.svg" },
+  { name: "Three", logo: "/clients/three.png" },
+  { name: "Consolidated Communications", logo: "/clients/consolidated-communications.png" },
+  { name: "KCOM", logo: "/clients/kcom.png" },
+  { name: "TET", logo: "/clients/tet.png" },
+  { name: "Smartest Energy", logo: "/clients/smartest-energy.webp" },
+  { name: "Sony Entertainment Television", logo: "/clients/sony-entertainment.png" },
+];
+
 export const certifications: string[] = [
   "Communications Cloud Accredited Professional",
   "Energy and Utilities Cloud Accredited Professional",
