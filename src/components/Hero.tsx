@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { profile } from "@/lib/cv-data";
 
 export default function Hero() {
@@ -49,13 +50,15 @@ export default function Hero() {
           </div>
 
           <div className="hidden md:block">
-            <div className="relative h-64 w-64 rounded-full bg-gradient-to-br from-white/20 to-white/5 p-1 shadow-2xl backdrop-blur lg:h-80 lg:w-80">
-              <div className="grid h-full w-full place-items-center rounded-full bg-white/10 text-7xl font-bold text-white lg:text-8xl">
-                {profile.name
-                  .split(" ")
-                  .map((p) => p[0])
-                  .join("")}
-              </div>
+            <div className="relative h-64 w-64 overflow-hidden rounded-full bg-gradient-to-br from-white/20 to-white/5 p-1 shadow-2xl backdrop-blur lg:h-80 lg:w-80">
+              <Image
+                src="/profile.jpg"
+                alt={profile.name}
+                fill
+                priority
+                sizes="(min-width: 1024px) 20rem, 16rem"
+                className="rounded-full object-cover object-[60%_25%]"
+              />
             </div>
           </div>
         </div>
