@@ -1,10 +1,10 @@
 export const profile = {
   name: "Shubham Kundu",
-  title: "Technical Lead | Cloobees",
+  title: "Technical Architect | Ideahelix",
   location: "Bangalore, India",
   email: "shubhsalesforce@gmail.com",
   phone: "+91-9804954068",
-  totalExperience: "7+ years",
+  totalExperience: "9+ years",
   summary:
     "Experienced Salesforce professional with a proven track record in architecting solutions within the Salesforce ecosystem, particularly focused on Salesforce Omnistudio. Demonstrated expertise in designing and implementing scalable and innovative solutions to meet business requirements. Proficient in analyzing complex business processes and translating them into efficient technical solutions. Skilled communicator and leader, adept at collaborating with cross-functional teams to drive successful project outcomes.",
 } as const;
@@ -46,10 +46,23 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
+    company: "Ideahelix",
+    role: "Technical Architect",
+    period: "July 2024 – Present",
+    duration: "1.10 years",
+    client: "Telecommunication B2B | Insurance (Pre-Sales)",
+    bullets: [
+      "Led delivery on two Telecommunications engagements, owning Order Management and CPQ workstreams end-to-end.",
+      "Designed and developed complex Callout-to-Billing integrations between Salesforce and downstream billing systems.",
+      "Partnered with the Pre-Sales team on new Telco and Insurance opportunities, shaping solution architecture and effort estimates.",
+      "Built a Proof of Concept on Revenue Cloud — Agentforce Revenue Management (ARM) — and used Agentforce Builder to author custom AI agents.",
+    ],
+  },
+  {
     company: "Cloobees",
     role: "Technical Lead | Senior Vlocity Developer",
-    period: "April 2021 – Present",
-    duration: "3 years",
+    period: "April 2021 – June 2024",
+    duration: "3.2 years",
     client: "Telecommunication B2B | Energy & Utilities",
     bullets: [
       "Design and implement scalable and flexible solutions using Salesforce Omnistudio, ensuring alignment with best practices and industry standards.",

@@ -11,7 +11,7 @@ export default function Experience() {
         <SectionHeading
           eyebrow="Career journey"
           title="Work Experience"
-          subtitle="Seven years of progressive leadership across telecommunications, energy & utilities, health, and insurance — at IBM, Capgemini, Deloitte, and Cloobees."
+          subtitle="Nine years of progressive leadership across telecommunications, energy & utilities, health, and insurance — at IBM, Capgemini, Deloitte, Cloobees, and Ideahelix."
         />
 
         <ol className="relative mt-14 space-y-10 border-l-2 border-[var(--border)] pl-8">
