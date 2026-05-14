@@ -35,6 +35,26 @@ export default function Footer() {
                 {profile.phone}
               </a>
             </li>
+            <li>
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-[var(--foreground)] transition-colors hover:text-[var(--brand)]"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href={profile.trailblazer}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-[var(--foreground)] transition-colors hover:text-[var(--brand)]"
+              >
+                Trailblazer profile
+              </a>
+            </li>
             <li className="text-[var(--muted)]">{profile.location}</li>
           </ul>
         </div>

@@ -4,6 +4,8 @@ export const profile = {
   location: "Bangalore, India",
   email: "shubhsalesforce@gmail.com",
   phone: "+91-9804954068",
+  linkedin: "https://www.linkedin.com/in/shubham-kundu-%E2%98%81-a38b83102/",
+  trailblazer: "https://www.salesforce.com/trailblazer/skundu150",
   totalExperience: "9+ years",
   summary:
     "Experienced Salesforce professional with a proven track record in architecting solutions within the Salesforce ecosystem, particularly focused on Salesforce Omnistudio. Demonstrated expertise in designing and implementing scalable and innovative solutions to meet business requirements. Proficient in analyzing complex business processes and translating them into efficient technical solutions. Skilled communicator and leader, adept at collaborating with cross-functional teams to drive successful project outcomes.",
