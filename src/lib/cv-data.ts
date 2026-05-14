@@ -129,7 +129,7 @@ export const clients: Client[] = [
   { name: "Consolidated Communications", logo: "/clients/consolidated-communications.png" },
   { name: "KCOM", logo: "/clients/kcom.png" },
   { name: "TET", logo: "/clients/tet.png" },
-  { name: "Smartest Energy", logo: "/clients/smartest-energy.webp" },
+  { name: "Smartest Energy", logo: "/clients/smartest-energy.png" },
   { name: "Sony Entertainment Television", logo: "/clients/sony-entertainment.png" },
 ];
 
