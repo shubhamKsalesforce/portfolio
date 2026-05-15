@@ -9,6 +9,13 @@ import {
 import { SectionHeading } from "./Skills";
 
 export default function Certifications() {
+  const salesforceCerts = certifications.filter(
+    (c) => c.name.startsWith("Salesforce") || c.name.includes("Accredited"),
+  );
+  const otherCerts = certifications.filter(
+    (c) => !salesforceCerts.includes(c),
+  );
+
   return (
     <section
       id="certifications"
@@ -73,31 +80,28 @@ export default function Certifications() {
           <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--muted)]">
             Owned Credentials ({certifications.length})
           </h3>
-          <ul className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {certifications.map((cert) => (
-              <li
-                key={cert.name}
-                className="group flex flex-col items-center rounded-xl border border-[var(--border)] bg-[var(--card)] p-4 text-center shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <div className="relative flex h-24 w-24 items-center justify-center">
-                  {cert.badge ? (
-                    <Image
-                      src={cert.badge}
-                      alt={cert.name}
-                      fill
-                      sizes="6rem"
-                      className="object-contain"
-                    />
-                  ) : (
-                    <CloudPlaceholder />
-                  )}
-                </div>
-                <p className="mt-3 text-xs font-medium leading-snug text-[var(--foreground)]">
-                  {cert.name}
-                </p>
-              </li>
-            ))}
-          </ul>
+
+          <div className="mt-6">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--brand)]">
+              Salesforce ({salesforceCerts.length})
+            </h4>
+            <ul className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+              {salesforceCerts.map((cert) => (
+                <CertTile key={cert.name} cert={cert} />
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-10">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--brand)]">
+              Others ({otherCerts.length})
+            </h4>
+            <ul className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+              {otherCerts.map((cert) => (
+                <CertTile key={cert.name} cert={cert} />
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-14">
@@ -210,6 +214,33 @@ function TrailheadStat({ label, value }: { label: string; value: string }) {
         {value}
       </dd>
     </div>
+  );
+}
+
+function CertTile({
+  cert,
+}: {
+  cert: { name: string; badge?: string };
+}) {
+  return (
+    <li className="group flex flex-col items-center rounded-xl border border-[var(--border)] bg-[var(--card)] p-4 text-center shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+      <div className="relative flex h-24 w-24 items-center justify-center">
+        {cert.badge ? (
+          <Image
+            src={cert.badge}
+            alt={cert.name}
+            fill
+            sizes="6rem"
+            className="object-contain"
+          />
+        ) : (
+          <CloudPlaceholder />
+        )}
+      </div>
+      <p className="mt-3 text-xs font-medium leading-snug text-[var(--foreground)]">
+        {cert.name}
+      </p>
+    </li>
   );
 }
 
