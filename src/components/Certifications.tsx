@@ -39,8 +39,23 @@ export default function Certifications() {
               {trailhead.rank}
             </p>
             <p className="mt-1 text-sm text-[var(--muted)]">
-              Active learner on Salesforce Trailhead — view full profile →
+              Active learner on Salesforce Trailhead.
             </p>
+            <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-[var(--brand)] px-4 py-2 text-xs font-semibold text-white shadow-sm transition-transform group-hover:-translate-y-0.5">
+              View full profile
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+                aria-hidden="true"
+              >
+                <path d="M5 10h10M11 5l5 5-5 5" />
+              </svg>
+            </span>
           </div>
           <dl className="grid w-full grid-cols-3 gap-4 text-center sm:w-auto sm:gap-8 sm:text-left">
             <TrailheadStat label="Badges" value={trailhead.badges.toLocaleString()} />
