@@ -19,9 +19,17 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-30 w-full border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="#about" className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-[var(--brand)] text-sm font-bold text-white">
+        <Link href="#about" className="group flex items-center gap-2.5">
+          <span className="relative grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[var(--brand)] to-[var(--brand-indigo)] text-sm font-bold text-white shadow-md shadow-[var(--brand)]/30 transition-transform group-hover:-translate-y-0.5">
             {initials}
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="absolute -right-1 -top-1 h-3.5 w-3.5 text-[var(--brand-accent)] drop-shadow"
+              aria-hidden="true"
+            >
+              <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" />
+            </svg>
           </span>
           <span className="hidden text-sm font-semibold sm:inline">
             {profile.name}

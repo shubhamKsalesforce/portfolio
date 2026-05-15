@@ -59,8 +59,16 @@ export function SectionHeading({
   subtitle?: string;
 }) {
   return (
-    <div className="max-w-2xl">
-      <p className="text-xs font-semibold uppercase tracking-wider text-[var(--brand)]">
+    <div className="max-w-2xl animate-fade-up">
+      <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--brand)]">
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="h-3.5 w-3.5"
+          aria-hidden="true"
+        >
+          <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" />
+        </svg>
         {eyebrow}
       </p>
       <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">

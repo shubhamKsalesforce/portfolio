@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --brand: #1e3a8a;
-  --brand-soft: #3b82f6;
-  --brand-accent: #0ea5e9;
+  --background: #f3f8fe;
+  --foreground: #181818;
+  --brand: #0176d3;
+  --brand-soft: #1aa1f0;
+  --brand-accent: #04e1cb;
+  --brand-indigo: #032d60;
   --card: #ffffff;
-  --muted: #64748b;
-  --border: #e2e8f0;
+  --muted: #6b7280;
+  --border: #dce5ee;
 }
 
 @theme inline {
@@ -17,6 +18,7 @@
   --color-brand: var(--brand);
   --color-brand-soft: var(--brand-soft);
   --color-brand-accent: var(--brand-accent);
+  --color-brand-indigo: var(--brand-indigo);
   --color-card: var(--card);
   --color-muted: var(--muted);
   --color-border: var(--border);
@@ -26,14 +28,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b1220;
-    --foreground: #e2e8f0;
-    --brand: #60a5fa;
-    --brand-soft: #3b82f6;
-    --brand-accent: #38bdf8;
-    --card: #111a2e;
-    --muted: #94a3b8;
-    --border: #1e293b;
+    --background: #061327;
+    --foreground: #f0f4f8;
+    --brand: #1b96ff;
+    --brand-soft: #56b5ff;
+    --brand-accent: #04e1cb;
+    --brand-indigo: #0a1d3f;
+    --card: #0e1f3d;
+    --muted: #9da8bc;
+    --border: #1a2e54;
   }
 }
 
@@ -46,4 +49,58 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+@keyframes sf-fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sf-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sf-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes sf-drift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes sf-pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(1, 118, 211, 0.35); }
+  50% { box-shadow: 0 0 0 12px rgba(1, 118, 211, 0); }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: sf-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-fade-in {
+    animation: sf-fade-in 0.8s ease-out both;
+  }
+  .animate-float {
+    animation: sf-float 6s ease-in-out infinite;
+  }
+  .animate-drift {
+    background-size: 200% 200%;
+    animation: sf-drift 18s ease-in-out infinite;
+  }
+  .animate-pulse-glow {
+    animation: sf-pulse-glow 2.4s ease-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-float,
+  .animate-drift,
+  .animate-pulse-glow {
+    animation: none !important;
+  }
 }
