@@ -135,28 +135,42 @@ export const clients: Client[] = [
   { name: "Anthem", logo: "/clients/anthem.png" },
 ];
 
-export const certifications: string[] = [
-  "Communications Cloud Accredited Professional",
-  "Energy and Utilities Cloud Accredited Professional",
-  "Salesforce Certified OmniStudio Developer",
-  "Salesforce Certified OmniStudio Consultant",
-  "Salesforce Certified Industries CPQ Developer",
-  "Salesforce Certified Revenue Cloud Consultant",
-  "Vlocity Certified Communications Order Management Developer I",
-  "Vlocity Certified Professional Communications Developer II",
-  "Vlocity Health Quoting Developer I",
-  "Vlocity Certified Professional Health Developer II",
-  "Vlocity Insurance Quoting Developer I",
-  "Vlocity Energy and Utilities Developer I",
-  "Salesforce Certified Platform Developer I",
-  "Salesforce Certified Platform Developer II",
-  "Salesforce Certified Administrator",
-  "Salesforce Certified Platform App Builder",
-  "Salesforce Certified Sharing and Visibility Designer",
-  "Salesforce Certified Data Architecture and Management Designer",
-  "Salesforce Certified Identity and Access Management Designer",
-  "Salesforce Certified Application Architect",
-  "Salesforce Certified JavaScript Developer 1",
+export type Certification = {
+  name: string;
+  badge?: string;
+};
+
+export const certifications: Certification[] = [
+  { name: "Communications Cloud Accredited Professional" },
+  { name: "Energy and Utilities Cloud Accredited Professional" },
+  { name: "Salesforce Certified OmniStudio Developer", badge: "/certs/omnistudio-developer.png" },
+  { name: "Salesforce Certified OmniStudio Consultant", badge: "/certs/omnistudio-consultant.png" },
+  { name: "Salesforce Certified Industries CPQ Developer", badge: "/certs/industries-cpq-developer.png" },
+  { name: "Salesforce Certified Revenue Cloud Consultant" },
+  { name: "Vlocity Certified Communications Order Management Developer I", badge: "/certs/vlocity-comms-order-mgmt-developer-i.png" },
+  { name: "Vlocity Certified Professional Communications Developer II", badge: "/certs/vlocity-comms-developer-ii.png" },
+  { name: "Vlocity Certified Communications & Media CPQ Administrator", badge: "/certs/vlocity-comms-media-cpq-admin.png" },
+  { name: "Vlocity Certified Platform Consultant (Digital Interaction Platform)", badge: "/certs/vlocity-platform-consultant-dip.png" },
+  { name: "Vlocity Health Quoting Developer I", badge: "/certs/vlocity-health-quoting-developer-i.png" },
+  { name: "Vlocity Certified Professional Health Developer II" },
+  { name: "Vlocity Insurance Quoting Developer I", badge: "/certs/vlocity-insurance-quoting-developer-i.png" },
+  { name: "Vlocity Energy and Utilities Developer I", badge: "/certs/vlocity-energy-utilities-developer-i.png" },
+  { name: "Salesforce Certified Platform Developer I", badge: "/certs/platform-developer-i.png" },
+  { name: "Salesforce Certified Platform Developer II", badge: "/certs/platform-developer-ii.png" },
+  { name: "Salesforce Certified Administrator", badge: "/certs/administrator.png" },
+  { name: "Salesforce Certified Platform App Builder", badge: "/certs/platform-app-builder.png" },
+  { name: "Salesforce Certified Sharing and Visibility Designer", badge: "/certs/sharing-and-visibility-designer.png" },
+  { name: "Salesforce Certified Data Architecture and Management Designer", badge: "/certs/data-architecture-and-management-designer.png" },
+  { name: "Salesforce Certified Identity and Access Management Designer", badge: "/certs/identity-and-access-management-designer.png" },
+  { name: "Salesforce Certified Application Architect", badge: "/certs/application-architect.png" },
+  { name: "Salesforce Certified JavaScript Developer 1", badge: "/certs/javascript-developer-i.png" },
+];
+
+export type Recognition = { name: string; badge?: string };
+
+export const recognitions: Recognition[] = [
+  { name: "Vlocity VIP Masters Program Member", badge: "/certs/vlocity-vip-masters.png" },
+  { name: "Vlocity Customer Endorsement — Health", badge: "/certs/vlocity-customer-endorsement-health.png" },
 ];
 
 export const trailhead = {

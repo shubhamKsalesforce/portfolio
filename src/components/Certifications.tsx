@@ -1,6 +1,11 @@
 import Image from "next/image";
-import { certifications, awards, trailhead } from "@/lib/cv-data";
-import { profile } from "@/lib/cv-data";
+import {
+  awards,
+  certifications,
+  profile,
+  recognitions,
+  trailhead,
+} from "@/lib/cv-data";
 import { SectionHeading } from "./Skills";
 
 export default function Certifications() {
@@ -13,14 +18,14 @@ export default function Certifications() {
         <SectionHeading
           eyebrow="Credentials"
           title="Certifications & Awards"
-          subtitle="20+ Salesforce and Vlocity certifications spanning architect, developer, and consultant tracks — plus recognition from every employer along the way."
+          subtitle={`${certifications.length}+ Salesforce and Vlocity certifications spanning architect, developer, and consultant tracks — plus recognition from every employer along the way.`}
         />
 
         <a
           href={profile.trailblazer}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-10 flex flex-col items-center gap-6 rounded-2xl border border-[var(--border)] bg-gradient-to-br from-[#032E61]/[0.04] via-[var(--card)] to-[#032E61]/[0.04] p-6 shadow-sm transition-shadow hover:shadow-md sm:flex-row sm:gap-8 sm:p-8"
+          className="group mt-10 flex flex-col items-center gap-6 rounded-2xl border border-[var(--border)] bg-gradient-to-br from-[var(--brand)]/[0.04] via-[var(--card)] to-[var(--brand-indigo)]/[0.04] p-6 shadow-sm transition-shadow hover:shadow-md sm:flex-row sm:gap-8 sm:p-8"
         >
           <div className="relative h-24 w-24 shrink-0 sm:h-28 sm:w-28">
             <Image
@@ -64,21 +69,62 @@ export default function Certifications() {
           </dl>
         </a>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[2fr_1fr]">
+        <div className="mt-14">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--muted)]">
+            Owned Credentials ({certifications.length})
+          </h3>
+          <ul className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {certifications.map((cert) => (
+              <li
+                key={cert.name}
+                className="group flex flex-col items-center rounded-xl border border-[var(--border)] bg-[var(--card)] p-4 text-center shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="relative flex h-24 w-24 items-center justify-center">
+                  {cert.badge ? (
+                    <Image
+                      src={cert.badge}
+                      alt={cert.name}
+                      fill
+                      sizes="6rem"
+                      className="object-contain"
+                    />
+                  ) : (
+                    <CloudPlaceholder />
+                  )}
+                </div>
+                <p className="mt-3 text-xs font-medium leading-snug text-[var(--foreground)]">
+                  {cert.name}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-14 grid gap-10 lg:grid-cols-[3fr_2fr]">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--muted)]">
-              Certifications ({certifications.length})
+              Customer Endorsement
             </h3>
-            <ul className="mt-5 grid gap-2 sm:grid-cols-2">
-              {certifications.map((cert) => (
+            <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {recognitions.map((rec) => (
                 <li
-                  key={cert}
-                  className="flex items-start gap-3 rounded-lg border border-[var(--border)] bg-[var(--card)] p-3 text-sm shadow-sm"
+                  key={rec.name}
+                  className="flex h-24 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--card)] p-4 shadow-sm transition-shadow hover:shadow-md"
+                  title={rec.name}
                 >
-                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[var(--brand)]/10 text-[10px] font-bold text-[var(--brand)]">
-                    &#10003;
-                  </span>
-                  <span className="leading-snug">{cert}</span>
+                  {rec.badge ? (
+                    <div className="relative h-full w-full">
+                      <Image
+                        src={rec.badge}
+                        alt={rec.name}
+                        fill
+                        sizes="(min-width: 640px) 18rem, 90vw"
+                        className="object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <span className="text-sm font-medium">{rec.name}</span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -88,7 +134,7 @@ export default function Certifications() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--muted)]">
               Awards
             </h3>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-6 space-y-3">
               {awards.map((award) => (
                 <li
                   key={award}
@@ -115,6 +161,21 @@ function TrailheadStat({ label, value }: { label: string; value: string }) {
       <dd className="text-xl font-bold text-[var(--brand)] sm:text-2xl">
         {value}
       </dd>
+    </div>
+  );
+}
+
+function CloudPlaceholder() {
+  return (
+    <div className="grid h-20 w-20 place-items-center rounded-lg bg-gradient-to-br from-[var(--brand)]/10 to-[var(--brand-indigo)]/10">
+      <svg
+        viewBox="0 0 200 120"
+        fill="currentColor"
+        className="h-10 w-10 text-[var(--brand)]"
+        aria-hidden="true"
+      >
+        <path d="M50 90c-16 0-30-12-30-28 0-15 12-27 27-28 4-15 18-26 34-26 18 0 34 13 36 30 2 0 4-1 6-1 13 0 24 10 24 23 0 14-11 24-24 24H50z" />
+      </svg>
     </div>
   );
 }
