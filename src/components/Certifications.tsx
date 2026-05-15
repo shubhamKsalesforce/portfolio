@@ -100,52 +100,100 @@ export default function Certifications() {
           </ul>
         </div>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-[3fr_2fr]">
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--muted)]">
-              Customer Endorsement
-            </h3>
-            <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {recognitions.map((rec) => (
-                <li
-                  key={rec.name}
-                  className="flex h-24 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--card)] p-4 shadow-sm transition-shadow hover:shadow-md"
-                  title={rec.name}
-                >
-                  {rec.badge ? (
-                    <div className="relative h-full w-full">
-                      <Image
-                        src={rec.badge}
-                        alt={rec.name}
-                        fill
-                        sizes="(min-width: 640px) 18rem, 90vw"
-                        className="object-contain"
-                      />
-                    </div>
-                  ) : (
-                    <span className="text-sm font-medium">{rec.name}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-14">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--muted)]">
+            Customer Endorsement
+          </h3>
+          <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {recognitions.map((rec) => (
+              <li
+                key={rec.name}
+                className="flex h-24 items-center justify-center rounded-xl border border-[var(--border)] bg-white p-4 shadow-sm transition-shadow hover:shadow-md"
+                title={rec.name}
+              >
+                {rec.badge ? (
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={rec.badge}
+                      alt={rec.name}
+                      fill
+                      sizes="(min-width: 640px) 24rem, 90vw"
+                      className="object-contain"
+                    />
+                  </div>
+                ) : (
+                  <span className="text-sm font-medium">{rec.name}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--muted)]">
-              Awards
-            </h3>
-            <ul className="mt-6 space-y-3">
-              {awards.map((award) => (
-                <li
-                  key={award}
-                  className="rounded-lg border border-[var(--border)] bg-gradient-to-br from-[var(--brand)]/5 to-transparent p-4 text-sm font-medium shadow-sm"
+        <div className="mt-14">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--muted)]">
+            Awards & Recognitions
+          </h3>
+          <ul className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {awards.map((award, i) => (
+              <li
+                key={`${award.organization}-${award.year}-${i}`}
+                className="group relative overflow-hidden rounded-2xl border border-[var(--border)] bg-gradient-to-br from-amber-50 via-white to-[var(--brand)]/5 p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:from-amber-500/[0.08] dark:via-[var(--card)] dark:to-[var(--brand)]/10"
+              >
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-gradient-to-br from-amber-300/50 to-amber-500/0 blur-2xl"
+                />
+                <svg
+                  aria-hidden
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="absolute right-3 top-3 h-5 w-5 text-amber-400/50 transition-transform group-hover:rotate-12"
                 >
-                  <span className="block text-2xl leading-none">&#127942;</span>
-                  <span className="mt-2 block">{award}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+                  <path d="M12 2l2.4 6.7L21 9l-5.4 3.9L17.8 20 12 16.4 6.2 20l2.2-7.1L3 9l6.6-.3z" />
+                </svg>
+
+                <div className="relative flex items-center gap-4">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white p-2 shadow-sm ring-1 ring-[var(--border)]">
+                    {award.logo ? (
+                      <div className="relative h-full w-full">
+                        <Image
+                          src={award.logo}
+                          alt={award.organization}
+                          fill
+                          sizes="3.5rem"
+                          className="object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <span className="text-lg font-bold text-[var(--brand)]">
+                        {award.organization[0]}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)]">
+                      {award.organization}
+                    </p>
+                    <p className="text-base font-bold leading-tight text-[var(--foreground)]">
+                      {award.name}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="relative mt-4 flex items-center justify-between border-t border-[var(--border)]/60 pt-3">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-medium text-amber-700 dark:text-amber-300">
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" aria-hidden>
+                      <path d="M5 4h14v3a5 5 0 0 1-5 5h-1v2.05A4 4 0 0 1 17 18h-2v3H9v-3H7a4 4 0 0 1 3-3.95V12h-1a5 5 0 0 1-5-5V4zm2 2v1a3 3 0 0 0 3 3v-4H7zm10 0v4a3 3 0 0 0 3-3V6h-3z" />
+                    </svg>
+                    Awarded
+                  </span>
+                  <span className="text-2xl font-extrabold tracking-tight text-[var(--brand)]">
+                    {award.year}
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

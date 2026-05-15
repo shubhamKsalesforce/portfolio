@@ -180,10 +180,17 @@ export const trailhead = {
   trails: 13,
 } as const;
 
-export const awards: string[] = [
-  "Capgemini Enabling Champion, 2019",
-  "Deloitte Spot Award for Vlocity COE, 2020",
-  "Cloobees Most Valued Bee, 2022",
-  "Cloobees Most Valued Bee, 2023",
-  "Ideahelix Helix Radiance Award, 2026",
+export type Award = {
+  organization: string;
+  name: string;
+  year: string;
+  logo?: string;
+};
+
+export const awards: Award[] = [
+  { organization: "Ideahelix", name: "Helix Radiance Award", year: "2026", logo: "/employers/ideahelix.svg" },
+  { organization: "Cloobees", name: "Most Valued Bee", year: "2023", logo: "/employers/cloobees.webp" },
+  { organization: "Cloobees", name: "Most Valued Bee", year: "2022", logo: "/employers/cloobees.webp" },
+  { organization: "Deloitte", name: "Spot Award for Vlocity COE", year: "2020", logo: "/employers/deloitte.svg" },
+  { organization: "Capgemini", name: "Enabling Champion", year: "2019", logo: "/employers/capgemini.svg" },
 ];
