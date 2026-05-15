@@ -7,7 +7,6 @@ import {
   experience,
   industries,
   profile,
-  recognitions,
   skills,
   trailhead,
 } from "@/lib/cv-data";
@@ -144,7 +143,7 @@ export default function ResumePage() {
             </ul>
           </Section>
 
-          <Section title="Awards & Recognitions">
+          <Section title="Awards">
             <ul className="space-y-1 text-[10pt]">
               {awards.map((a, i) => (
                 <li key={`${a.organization}-${a.year}-${i}`} className="flex gap-2">
@@ -154,14 +153,6 @@ export default function ResumePage() {
                   <span>
                     {a.name} <span className="text-slate-500">— {a.organization}</span>
                   </span>
-                </li>
-              ))}
-              {recognitions.map((r) => (
-                <li key={r.name} className="flex gap-2">
-                  <span className="font-semibold text-[#0176d3] w-12 shrink-0">
-                    —
-                  </span>
-                  <span>{r.name}</span>
                 </li>
               ))}
             </ul>
