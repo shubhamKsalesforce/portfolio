@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { experience } from "@/lib/cv-data";
 import { SectionHeading } from "./Skills";
 
@@ -14,11 +15,25 @@ export default function Experience() {
           subtitle="Nine years of progressive leadership across telecommunications, energy & utilities, health, and insurance — at IBM, Capgemini, Deloitte, Cloobees, and Ideahelix."
         />
 
-        <ol className="relative mt-14 space-y-10 border-l-2 border-[var(--border)] pl-8">
+        <ol className="relative mt-14 space-y-10 border-l-2 border-[var(--border)] pl-10 sm:pl-12">
           {experience.map((job) => (
             <li key={job.company} className="relative">
-              <span className="absolute -left-[42px] grid h-7 w-7 place-items-center rounded-full border-2 border-[var(--brand)] bg-[var(--background)] text-xs font-bold text-[var(--brand)]">
-                {job.company[0]}
+              <span className="absolute -left-[36px] grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-full border-2 border-[var(--brand)] bg-white p-1.5 shadow-sm ring-4 ring-[var(--background)] sm:-left-[44px] sm:h-14 sm:w-14">
+                {job.logo ? (
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={job.logo}
+                      alt={job.company}
+                      fill
+                      sizes="3.5rem"
+                      className="object-contain"
+                    />
+                  </div>
+                ) : (
+                  <span className="text-sm font-bold text-[var(--brand)]">
+                    {job.company[0]}
+                  </span>
+                )}
               </span>
 
               <div className="rounded-xl border border-[var(--border)] bg-[var(--background)] p-6 shadow-sm">

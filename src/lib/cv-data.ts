@@ -45,6 +45,7 @@ export type Experience = {
   period: string;
   duration: string;
   client: string;
+  logo?: string;
   bullets: string[];
 };
 
@@ -55,6 +56,7 @@ export const experience: Experience[] = [
     period: "July 2024 – Present",
     duration: "1.10 years",
     client: "Telecommunication B2B | Insurance (Pre-Sales)",
+    logo: "/employers/ideahelix.svg",
     bullets: [
       "Led delivery on two Telecommunications engagements, owning Order Management and CPQ workstreams end-to-end.",
       "Designed and developed complex Callout-to-Billing integrations between Salesforce and downstream billing systems.",
@@ -68,6 +70,7 @@ export const experience: Experience[] = [
     period: "April 2021 – June 2024",
     duration: "3.2 years",
     client: "Telecommunication B2B | Energy & Utilities",
+    logo: "/employers/cloobees.webp",
     bullets: [
       "Design and implement scalable and flexible solutions using Salesforce Omnistudio, ensuring alignment with best practices and industry standards.",
       "Lead a team of developers and engineers in executing project deliverables, providing technical guidance and support throughout the development lifecycle.",
@@ -81,6 +84,7 @@ export const experience: Experience[] = [
     period: "June 2020 – April 2021",
     duration: "10 months",
     client: "Health | Media",
+    logo: "/employers/deloitte.svg",
     bullets: [
       "Designed optimized rating algorithm using Batch Apex and Integration Procedure.",
       "Designed and developed Rules like Underwriter Rule and Eligibility for Root Products.",
@@ -94,6 +98,7 @@ export const experience: Experience[] = [
     period: "December 2018 – June 2020",
     duration: "1.7 years",
     client: "Telecommunication B2B & B2C",
+    logo: "/employers/capgemini.svg",
     bullets: [
       "Responsible for creating technical configurations to external fulfilment systems at design time.",
       "Configuration of Commercial and Technical Product (Picklist, Attributes, Pricing, Rules, Entity Filters).",
@@ -109,6 +114,7 @@ export const experience: Experience[] = [
     period: "January 2017 – November 2018",
     duration: "2 years",
     client: "Telecommunication B2C",
+    logo: "/employers/ibm.svg",
     bullets: [
       "Being the Administrator in the organization created Profiles, Users, Permission Sets and implemented Record-Level and Field-Level security and configured their sharing settings.",
       "Worked on Dataraptors, Omniscripts.",
