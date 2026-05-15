@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { profile } from "@/lib/cv-data";
 
 export default function Footer() {
@@ -16,6 +17,26 @@ export default function Footer() {
               Whether you&apos;re looking for an architect, a delivery lead, or
               an OmniStudio expert — I&apos;d love to hear about your project.
             </p>
+            <Link
+              href="/resume"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-5 py-3 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--brand-indigo)] hover:shadow-lg"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4"
+                aria-hidden
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <path d="M7 10l5 5 5-5" />
+                <path d="M12 15V3" />
+              </svg>
+              Download Resume
+            </Link>
           </div>
 
           <ul className="space-y-3 text-sm md:text-right">

@@ -122,6 +122,22 @@ body {
   }
 }
 
+@media print {
+  @page {
+    size: A4;
+    margin: 0.4in;
+  }
+  html, body {
+    background: white !important;
+    color: black !important;
+    font-size: 10.5pt;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up,
   .animate-fade-in,
