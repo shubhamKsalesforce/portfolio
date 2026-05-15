@@ -76,6 +76,11 @@ body {
   50% { box-shadow: 0 0 0 12px rgba(1, 118, 211, 0); }
 }
 
+@keyframes sf-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 @layer utilities {
   .animate-fade-up {
     animation: sf-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -93,6 +98,28 @@ body {
   .animate-pulse-glow {
     animation: sf-pulse-glow 2.4s ease-out infinite;
   }
+  .animate-marquee {
+    animation: sf-marquee 40s linear infinite;
+  }
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
+  }
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -100,7 +127,8 @@ body {
   .animate-fade-in,
   .animate-float,
   .animate-drift,
-  .animate-pulse-glow {
+  .animate-pulse-glow,
+  .animate-marquee {
     animation: none !important;
   }
 }
