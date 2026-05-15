@@ -141,18 +141,18 @@ export type Certification = {
 };
 
 export const certifications: Certification[] = [
-  { name: "Communications Cloud Accredited Professional" },
-  { name: "Energy and Utilities Cloud Accredited Professional" },
+  { name: "Communications Cloud Accredited Professional", badge: "/certs/communications-cloud-accredited.png" },
+  { name: "Energy and Utilities Cloud Accredited Professional", badge: "/certs/energy-utilities-cloud-accredited.png" },
   { name: "Salesforce Certified OmniStudio Developer", badge: "/certs/omnistudio-developer.png" },
   { name: "Salesforce Certified OmniStudio Consultant", badge: "/certs/omnistudio-consultant.png" },
   { name: "Salesforce Certified Industries CPQ Developer", badge: "/certs/industries-cpq-developer.png" },
-  { name: "Salesforce Certified Revenue Cloud Consultant" },
+  { name: "Salesforce Certified Revenue Cloud Consultant", badge: "/certs/revenue-cloud-consultant.png" },
   { name: "Vlocity Certified Communications Order Management Developer I", badge: "/certs/vlocity-comms-order-mgmt-developer-i.png" },
   { name: "Vlocity Certified Professional Communications Developer II", badge: "/certs/vlocity-comms-developer-ii.png" },
   { name: "Vlocity Certified Communications & Media CPQ Administrator", badge: "/certs/vlocity-comms-media-cpq-admin.png" },
   { name: "Vlocity Certified Platform Consultant (Digital Interaction Platform)", badge: "/certs/vlocity-platform-consultant-dip.png" },
   { name: "Vlocity Health Quoting Developer I", badge: "/certs/vlocity-health-quoting-developer-i.png" },
-  { name: "Vlocity Certified Professional Health Developer II" },
+  { name: "Vlocity Certified Professional Health Developer II", badge: "/certs/vlocity-health-developer-ii.png" },
   { name: "Vlocity Insurance Quoting Developer I", badge: "/certs/vlocity-insurance-quoting-developer-i.png" },
   { name: "Vlocity Energy and Utilities Developer I", badge: "/certs/vlocity-energy-utilities-developer-i.png" },
   { name: "Salesforce Certified Platform Developer I", badge: "/certs/platform-developer-i.png" },
