@@ -90,6 +90,41 @@ export default function Certifications() {
                 <CertTile key={cert.name} cert={cert} />
               ))}
             </ul>
+            <div className="mt-6 flex justify-center sm:justify-end">
+              <a
+                href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=DA1wcfc6A9jqXmxBcEaDJjyshrEz413agDMNMClcL/GjMqFyMu+/EDh0PbgnXVmG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-full border border-[var(--brand)]/30 bg-[var(--brand)]/5 px-5 py-2.5 text-sm font-semibold text-[var(--brand)] shadow-sm transition-all hover:-translate-y-0.5 hover:bg-[var(--brand)] hover:text-white hover:shadow-md"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-4 w-4"
+                  aria-hidden
+                >
+                  <path d="M9 12l2 2 4-4" />
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01z" />
+                </svg>
+                Verify Certifications
+                <svg
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+                  aria-hidden
+                >
+                  <path d="M5 10h10M11 5l5 5-5 5" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <div className="mt-10">
